@@ -1,0 +1,5 @@
+For each team a forum was created on eFundi.
+
+Team members should use the forum to communicate, e.g. discuss code, post url of repo etc.
+
+The forum activity of each team member will count towards the mark given for the assignment.

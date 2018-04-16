@@ -1,0 +1,12 @@
+
+    Only one member of the team must submit the URL of the git repository as submission for this assignment.
+    The due date was for submitting the URL.
+    You can expect additional requirements on Tuesday 17 April which will force you as team to revise your code 
+	and documentation.
+    You will be assessed on:
+        Team interaction: use the designated eFundi forum to give evidence of this. If you have used other 
+		communication means such as email or WhatsApp, then each member must paste his/her contribution also 
+		on the forum. EFundi automatically assigns a mark per student for forum contributions.
+        History of git commits and other git activity.
+        The final documents (cutoff date to be announced later)
+        The final code (cutoff date to be announced later)
