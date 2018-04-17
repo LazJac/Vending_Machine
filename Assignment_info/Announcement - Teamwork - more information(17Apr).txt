@@ -1,0 +1,22 @@
+Only one member of the team must submit the URL of the git repository as submission for this assignment.
+The due date was for submitting the URL.
+You can expect additional requirements on Tuesday 17 April which will force you as team to revise your code and documentation.
+
+Modify the Vending Machine CLIPS program to:
+
+1) Accept payment with the following units:
+    R5, R2, R1, c50, c20, c10
+
+2) Give a choice of items with their prices:
+    (cola    8.50)
+    (orange 10.00)
+    (sweets 12.50)
+        (chocolate 15.00)
+
+3) Calculate change.
+
+    You will be assessed on:
+        Team interaction: use the designated eFundi forum to give evidence of this. If you have used other communication means such as email or WhatsApp, then each member must paste his/her contribution also on the forum. EFundi automatically assigns a mark per student for forum contributions.
+        History of git commits and other git activity.
+        The final documents (cutoff date to be announced later)
+        The final code (cutoff date to be announced later)
