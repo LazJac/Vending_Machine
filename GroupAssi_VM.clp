@@ -1,16 +1,23 @@
 (deftemplate current-value (slot number))
 
 (deffunction actionAnswer (?answer ?number)
-	(if (eq ?answer "n")
+	(if (lexemep ?answer)
 	then 
-		(bind ?answer (+ ?number 5))
-	else
-		(if (eq ?answer "q") 
+		(bind ?answer (lowcase ?answer))
+	
+		(if (or (or (eq ?answer "n")(eq ?answer "nickel")) (or (eq ?answer "5")(eq ?answer "5c")))
 		then 
-			(bind ?answer (+ ?number 25))
+			(bind ?answer (+ ?number 5))
 		else
-			(bind ?answer ?number) 
+			(if (or (or (eq ?answer "q")(eq ?answer "quarter")) (or (eq ?answer "25")(eq ?answer "25c"))) 
+			then 
+				(bind ?answer (+ ?number 25))
+			else
+				(bind ?answer ?number) 
+			)
 		)
+	else
+		(bind ?answer ?number) 
 	)
 	(return ?answer)
 )
@@ -27,7 +34,7 @@
 	=>
 	(printout t "Add a Nickel(5c) or a Quarter(25c): [Q or N]   --> Current amount: " ?num "c" crlf ":> ")
 	(bind ?ans (readline))
-		(retract ?fact)					 
+		(retract ?fact)					
 		(assert (current-value (number (actionAnswer ?ans ?num) )))
 )
 
@@ -45,3 +52,4 @@
 (deffacts vending
 	(current-value (number 0))	
 )
+
