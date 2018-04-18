@@ -16,17 +16,25 @@
 )
 
 (defrule Start
-	;
+	(declare (salience 2))
+	=>
+	(printout t "Starting program:" crlf)
 )
 
 (defrule Process
 	; call actionAnswer(answer, current number)
+	(declare (salience 0))
 )
 
 (defrule End
-	;check if <= 35c
+	(declare (salience 1))
+	?fact <- (current-value (number ?total))
+		(test(>= ?total 35))
 	=>
 	(printout t "DONE !!!" ?total)
+	(retract ?fact)
+	(reset)
+	(run)
 )
 
 (deffacts vending
