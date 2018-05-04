@@ -5,11 +5,11 @@
 	then 
 		(bind ?answer (lowcase ?answer))
 	
-		(if (or (or (eq ?answer "n")(eq ?answer "nickel")) (or (eq ?answer "5")(eq ?answer "5c")))
+		(if (or (eq ?answer "n") (eq ?answer "nickel") (eq ?answer "5") (eq ?answer "5c") )
 		then 
 			(bind ?answer (+ ?number 5))
 		else
-			(if (or (or (eq ?answer "q")(eq ?answer "quarter")) (or (eq ?answer "25")(eq ?answer "25c"))) 
+			(if (or (eq ?answer "q") (eq ?answer "quarter") (eq ?answer "25") (eq ?answer "25c") ) 
 			then 
 				(bind ?answer (+ ?number 25))
 			else
