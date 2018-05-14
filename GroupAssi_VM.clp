@@ -28,6 +28,7 @@
 	(printout t "Starting program:" crlf crlf)
 )
 
+
 (defrule Process
 	(declare (salience 0))
 	?fact <- (current-value (number ?num))
@@ -37,7 +38,6 @@
 		(retract ?fact)					
 		(assert (current-value (number (actionAnswer ?ans ?num) )))
 )
-
 (defrule End
 	(declare (salience 1))
 	?fact <- (current-value (number ?total))
